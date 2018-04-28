@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: .82em;
+            line-height: 1.4;
+        }
+        input {
+            vertical-align: middle;
+        }
+        input[type="range"] {
+            margin-right: 2em;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #fff;
+            padding: 1em;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, .2) 0 2px 3px;
+        }
+        main {
+            margin-left: -1em;
+            padding: 1em;
+        }
+        .box {
+            margin: 0 0 1em 1em;
+            border-radius: 2px;
+            background-color: #59B390;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <input type="number" min="10" max="3000" value="100" id="amout">
+        <label>
+            <input type="checkbox" name="repaint" id="repaint">
+            Repaint
+        </label>
+
+        <button id="btn">Pintar</button>
+    </header>
+
+    <main id="main"></main>
+
+
+    <script>
+        const repaint = document.getElementById('repaint');
+        const btn = document.getElementById('btn');
+        const main = document.getElementById('main');
+        const getAmount = document.getElementById('amout');
+
+
+        const createBoxes = () => {
+            main.innerHTML = '';
+
+            const start = performance.now();
+
+            if(repaint.checked) {
+                // mala implementación no hacer esto en casa!
+                for( let i = 0; i < getAmount.value; i++ ) {
+                    const box = document.createElement('div');
+                    box.style.width = `${main.offsetWidth / 10}px`;
+                    box.style.height = `${main.offsetWidth / 10}px`;
+                    
+                    box.classList.add('box');
+                    main.appendChild(box);
+                }
+                
+            } else {
+                // buena implementación
+                const amout = getAmount.value;
+                const size = main.offsetWidth / 10;
+                const frag = document.createDocumentFragment();
+
+                for( let i = 0; i < amout; i++ ) {
+                    const box = document.createElement('div');
+                    box.style.width = `${size}px`;
+                    box.style.height = `${size}px`;
+                    
+                    box.classList.add('box');
+                    frag.appendChild(box);
+                }
+                main.appendChild(frag);
+            }
+
+            console.log('Tiempo de ejecución: ', (performance.now() - start));
+        };
+
+        createBoxes();
+        btn.addEventListener('click', createBoxes);
+
+    </script>
+</body>
+</html>
