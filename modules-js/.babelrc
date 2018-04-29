@@ -1,0 +1,12 @@
+{
+    "ignore": [
+        "node_modules/**"
+    ],
+    "presets": [
+        ["es2015", {
+            "modules": false
+        }]
+    ],
+    "sourceMap": false,
+    "plugins": ["transform-object-assign"]
+}

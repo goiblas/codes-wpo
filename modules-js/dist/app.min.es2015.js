@@ -1,0 +1,1 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):n()}(0,function(){"use strict";const e=(e,n)=>e+n;const n=new class{constructor(e){this.number=e}sumar(n){return e(n+this.number)}}(20);console.log(n.sumar(5))});
