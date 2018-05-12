@@ -14,30 +14,30 @@ z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===t
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Dom ready!');
+
+    function onFontLoaded() {
+        const dom = document.documentElement;
+        dom.classList.remove('initial-font');
+        dom.classList.add('font-loaded');
+    }
+    
+    var fontNormal = new FontFaceObserver('Work Sans', {
+        weight: 400,
+    });
+    var fontWeight = new FontFaceObserver('Work Sans', {
+        weight: 700,
+    });
+    var fontLight = new FontFaceObserver('Work Sans', {
+        weight: 300,
+    });
+    
+    Promise.all([fontNormal, fontWeight, fontLight])
+        .then(
+            onFontLoaded,
+            function () {
+                console.log('Font is not available');
+            }
+        )
+    
 });
 
-function onFontLoaded() {
-    console.log('Font loaded!');
-    const dom = document.documentElement;
-    dom.classList.remove('initial-font');
-    dom.classList.add('font-loaded');
-}
-
-var fontNormal = new FontFaceObserver('Work Sans', {
-    weight: 400,
-});
-var fontWeight = new FontFaceObserver('Work Sans', {
-    weight: 700,
-});
-var fontLight = new FontFaceObserver('Work Sans', {
-    weight: 300,
-});
-
-Promise.all([fontNormal, fontWeight, fontLight])
-    .then(
-        onFontLoaded,
-        function () {
-            console.log('Font is not available');
-        }
-    )
