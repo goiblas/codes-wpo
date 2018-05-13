@@ -38,7 +38,6 @@ img {
 
 /* Typography
 -------------------------------------------- */
-
 /*
     Evito Utilizar local para el ejemplo
     src: local('Work Sans'), local('WorkSans-Regular'),
@@ -66,9 +65,10 @@ img {
 }
 
 .initial-font body {
-    font-family: Optima, Arial, Helvetica, sans-serif;
-    font-size: 1.02em;
-    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .96em;
+    line-height: 1.56;
+    letter-spacing: 0.063em;
 }
 
 .font-loaded body {
@@ -136,7 +136,6 @@ div[role="main"] {
         display: inline-block;
         padding: 1rem 1.9rem .8rem;
         text-transform: uppercase;
-        font-size: .82em;
         line-height: 1.7;
         text-decoration: none;
         transition: background .3s;
@@ -148,4 +147,12 @@ div[role="main"] {
     .main-nav a.selected {
         background-color: #ffde03;
         color: #111;
+    }
+    
+    /* Personalización del componente dependiendo de la fuente utilizada */
+    .initial-font .main-nav a {
+        font-size: .79em;
+    }
+    .font-loaded .main-nav a {
+        font-size: .82em;
     }
