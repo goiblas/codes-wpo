@@ -29,6 +29,18 @@
             height: auto;
             vertical-align: middle;
         }
+        main {
+            background-color: #ddd;
+            flex-grow: 1;
+        }
+        header {
+            background-color: #457D97;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
     </style>
 
 </head>
@@ -50,7 +62,7 @@
 </noscript>
 <script>
     
-    // Esperar a que todos los recursos estén cargados ?
+    // Esperar a que todos los recursos estén cargados 
     const afterWindowLoad = false;
 
     function loadDeferStyles () {
