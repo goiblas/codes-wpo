@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box; }
+
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  padding-bottom: 10vh; }
+
+h1, h2, h3, h4 {
+  font-weight: 300; }
+
+.georgia {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.9375rem;
+  letter-spacing: -0.015625rem;
+  word-spacing: 0.00625rem; }
+
+.nav-main {
+  width: 100%;
+  position: relative;
+  z-index: 2; }
+  .nav-main ul, .nav-main li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .nav-main ul {
+    display: flex;
+    width: 100%; }
+  .nav-main li {
+    width: 100%; }
+  .nav-main a {
+    display: block;
+    color: #f3f3f3;
+    text-decoration: none;
+    padding: 1.2rem 0; }
+    .nav-main a svg {
+      width: 25px;
+      height: 20px;
+      margin: auto;
+      display: block; }
+    @media (min-width: 40rem) {
+      .nav-main a {
+        display: inline-block; }
+        .nav-main a svg {
+          display: inline-block;
+          vertical-align: middle; }
+        .nav-main a::after {
+          display: inline-block;
+          vertical-align: middle;
+          content: attr(data-title);
+          margin-left: .3rem; } }
+  @media (max-width: 40rem) {
+    .nav-main {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%); } }
+
+.header-main {
+  width: 82%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6.5vh 0; }
+  @media (min-width: 40rem) {
+    .header-main {
+      display: flex; } }
+
+.logo svg {
+  display: block;
+  width: 120px;
+  height: 48px;
+  margin-left: auto; }
+
+.recipe-main {
+  display: flex;
+  flex: 1 0 auto; }
+  .recipe-main__header h1, .recipe-main__header h2 {
+    margin: 0;
+    padding: 0; }
+
+.index-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.bg-main {
+  background-image: url("img/Shibari-Bread.jpg");
+  background-size: cover; }
+
+.recipe-main__wrap {
+  margin: auto; }
+
+.recipe-main__body {
+  max-width: 60ch; }
+
+.recipe-main__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4rem; }
+  .recipe-main__header h2 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 400; }
+  .recipe-main__header h1 {
+    order: 1; }
+    .georgia .recipe-main__header h1 {
+      letter-spacing: -0.25px;
+      word-spacing: 0.1px; }
+    @media (min-width: 40rem) {
+      .recipe-main__header h1 {
+        font-size: 3.125rem; } }
+  .recipe-main__header p {
+    order: 2;
+    font-size: 0.875rem;
+    font-family: "Roboto", Arial, Helvetica, sans-serif; }
+
+.recipe-main .read-more {
+  margin-bottom: 10vh;
+  text-align: right;
+  padding: 2vh 0; }
+  .recipe-main .read-more a {
+    display: inline-block;
+    border-radius: 1rem 0;
+    padding: .6rem 1rem .1rem;
+    background-color: #dfce9a; }
+  .recipe-main .read-more svg {
+    margin: auto;
+    width: 36px;
+    height: 22px; }
+  @media (min-width: 40rem) {
+    .recipe-main .read-more a {
+      display: inline-block;
+      border-radius: 1rem 0;
+      padding: .6rem 1.2rem .1rem;
+      background-color: #dfce9a; }
+    .recipe-main .read-more svg {
+      margin: auto;
+      width: 49px;
+      height: 32px; } }
+
+.recipe-main, .logo {
+  position: relative;
+  z-index: 2; }
+
+.wrapper {
+  max-width: 1100px;
+  width: 82%;
+  margin: auto; }
+
+h1 .link-border {
+  box-shadow: #fff2ca 0 4px; }
+
+.bg-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; }
+  .bg-main::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 90%, black 100%); }
+  .bg-main img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }

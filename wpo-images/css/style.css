@@ -1,0 +1,20 @@
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+}
+img, video {
+  vertical-align: middle;
+}
+.grid {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center; }
+  .grid > img, .grid__item {
+    width: 50%;
+    height: auto; }
+  .grid img,
+  .grid video {
+    max-width: 100%;
+    height: auto; }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Optimización de imagenes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="grid">
+        <img src="img/opt-photoshop.jpg" alt="">
+        <img src="img/opt-progresivo.jpg" alt="">
+    </div>
+
+    
+    <div class="grid">
+        <picture>
+            <source srcset="http://via.placeholder.com/750x550" media="(min-width: 800px)"  type="image/webp">
+            <source srcset="http://via.placeholder.com/550x550" >
+            <img src="http://via.placeholder.com/350x150" alt="">
+        </picture>
+    </div>
+
+
+
+
+
+    <div class="grid grid--video">
+        <div class="grid__item">
+            <img src="img/gifvsmp4/starwars.gif" alt="">
+        </div>
+        <div class="grid__item">
+                <video  autoplay="autoplay" width="650" height="271"  autoplay="autoplay" loop="loop">
+                <source type="video/mp4" src="img/gifvsmp4/starwars.mp4">
+            </video>
+        </div>
+    </div>
+</body>
+</html>

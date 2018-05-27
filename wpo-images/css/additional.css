@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'frankruhllibre';
+  src: local("Frank Ruhl Libre"), url("../fonts/frankruhllibre-regular-webfont.woff2") format("woff2"), url("../fonts/frankruhllibre-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'frankruhllibre';
+  src: local("Frank Ruhl Libre"), url("../fonts/frankruhllibre-bold-webfont.woff2") format("woff2"), url("../fonts/frankruhllibre-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'frankruhllibre';
+  src: local("Frank Ruhl Libre"), url("../fonts/frankruhllibre-light-webfont.woff2") format("woff2"), url("../fonts/frankruhllibre-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+.frankRuhlLibre {
+  font-family: FrankRuhlLibre, Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem; }
+  .frankRuhlLibre h1 {
+    font-family: FrankRuhlLibre, Georgia, 'Times New Roman', Times, serif; }
